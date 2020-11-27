@@ -1,0 +1,7 @@
+{"type":"FeatureCollection","features":
+[{"type":"Feature","properties":{"name":"split tree"},"geometry":{"type":"Point","coordinates":[11.11093282699585,49.42462513860921]}},
+{"type":"Feature","properties":{"name":"birch tree"},"geometry":{"type":"Point","coordinates":[11.111083030700684,49.42419246671715]}},
+{"type":"Feature","properties":{"name":"stump"},"geometry":{"type":"Point","coordinates":[11.10844373703003,49.42586730445333]}},
+{"type":"Feature","properties":{"name":"small by lake"},"geometry":{"type":"Point","coordinates":[11.105525493621826,49.42702570044076]}},
+{"type":"Feature","properties":{"name":"split birch"},"geometry":{"type":"Point","coordinates":[11.110471487045286,49.4232084728868]}},
+{"type":"Feature","properties":{"name":"patchy bark tree"},"geometry":{"type":"Point","coordinates":[11.109827756881714,49.42462164933503]}}]}

@@ -1,0 +1,72 @@
+h1 {
+    font-family: futura;
+    font-style: italic;
+    font-size: 18px;
+    text-align: left;
+    color: rgb(77, 134, 134);
+}
+#description {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 5px 20px; 
+    width: 18%;
+}
+h2 {
+    font-family: Calibri;
+    font-style: normal;
+    text-align: left;
+    color:rgb(133, 163, 163);
+    font-size: 12.5px;
+}
+
+#hyperlink {
+    color: rgb(0, 200, 200);
+}
+
+#key {
+    margin: 20px auto;
+
+}
+#treekey {
+    width: 95%;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+
+}
+#treemap {
+    width: 33%;
+    height: 875px;
+    padding: 20px;
+    border: 2px dashed cyan;
+    margin: 20px;
+    opacity: .65;
+    position: sticky;
+
+
+}
+.leftside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: flex-end;
+
+}
+.rightside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: flex-start;
+}
+
+.drawings {
+    width: 225px;
+    margin: 10px;
+}
+
+.drawings:hover {
+    border: 2px solid cyan;
+}
+
