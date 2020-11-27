@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bearing Witness: Trees of Nuremberg</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+        <script src="jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" href="trees.css"/>
+    </head>
+    <body>
+       
+    <div class="content">
+        
+        <div id="description">
+            <h1>Bearing Witness: Portraits of Trees in the Reichsparteitagsgelände</h1>
+            <h2> Reichsparteitagsgelände, the Nazis party rally grounds, occupied 2718 
+                acres of land in the southeastern section of the city of Nuremberg, Germany. 
+                The site hosted six party rallies in the 1930s, but its intended use as the 
+                legislative/congressional center of the Nazi party never materialized.<br><br>
+                Today, the site hosts the <a href="https://museums.nuernberg.de/documentation-center/" id="hyperlink">Documentation Center</a>, a museum dedicated to educating 
+                visitors about the forces behind the Nazi party and the consequences of facism.  
+                Also remaining are the vast walkable grounds, which today serve as sites for music
+                festivals, holiday carnivals, and general recreational use to the public.<br><br>
+                In 2018, after touring the site, I created six drawings of different trees I 
+                observed throughout the grounds. Immobile by nature and with decades of history 
+                embedded in their rings, trees offer an apt metaphor for witness. In their cross 
+                sections, trees reveal to us the inflection points and disturbances of their environmental 
+                history, and show how these events reverberate across the remaining trajectory of their growth.<br><br>
+                Hover over the drawings of trees to see their location on the map, and click on select rally 
+                ground buildings and features to read a description of their use and history. 
+
+             </h2>
+             <br>
+             <div id="key"><img src="tree key.png" id="treekey"></div>
+        </div>
+
+        <div class="leftside">
+            <div id="tree3"><a href="tree images/tree3.jpg" target="_blank"><img src="tree images/tree3.jpg" class= "drawings" ></a></div>
+            <div id="tree2"><a href="tree images/tree2.jpg" target="_blank"><img src="tree images/tree2.jpg" class= "drawings" ></a></div>
+            <div id="tree1"><a href="tree images/tree1.jpg" target="_blank"><img src="tree images/tree1.jpg" class= "drawings" ></a></div>
+        </div>
+
+        <div id="treemap"></div>
+        <script>
+
+            
+            
+            var map = L.map("treemap").setView([49.424376, 11.110941], 15);
+
+            Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+}).addTo(map);
+
+
+
+            var marker5 = L.circleMarker([49.42462513860921,11.11093282699585], {color: "cyan", radius: 7}).addTo(map).bindPopup("<b>Species: </b><i>Robinia pseudoacacia</i>, black locust"); 
+            var marker6 = L.circleMarker([49.42419246671715,11.111083030700684], {color: "cyan", radius: 7}).addTo(map).bindPopup("<b>Species: </b><i>Betula pendula</i>, silver birch");
+            var marker4 = L.circleMarker([49.42586730445333,11.10844373703003], {color: "cyan", radius: 7}).addTo(map).bindPopup("<b>Species: </b>unidentified, stump");
+            var marker3 = L.circleMarker([49.42702570044076,11.105525493621826], {color: "cyan", radius: 7}).addTo(map).bindPopup("<b>Species: </b><i>Fagus sylvatica</i>, European beech");
+            var marker1 = L.circleMarker([49.4232084728868,11.110471487045286], {color: "cyan", radius: 7}).addTo(map).bindPopup("<b>Species: </b><i>Betula pendula</i>, silver birch");
+            var marker2 = L.circleMarker([49.42462164933503,11.109827756881714], {color: "cyan", radius: 7}).addTo(map).bindPopup("<b>Species: </b><i>Pinus sylvestris</i>, Scots pine");
+
+            
+            document.getElementById("tree1").onmouseover = function() {mouseOver()};
+         
+            function mouseOver() {marker1.openPopup(); }
+
+            document.getElementById("tree1").onmouseout = function() {mouseOut()};
+
+            function mouseOut () {marker1.closePopup();}
+
+
+            document.getElementById("tree2").onmouseover = function() {mouseOver2()};
+
+            function mouseOver2() {marker2.openPopup();}
+
+            document.getElementById("tree2").onmouseout = function() {mouseOut2()};
+
+            function mouseOut2() {marker2.closePopup();}
+
+            
+            document.getElementById("tree3").onmouseover = function() {mouseOver3()};
+
+            function mouseOver3() {marker3.openPopup();}
+
+            document.getElementById("tree3").onmouseout = function() {mouseOut3()};
+
+            function mouseOut3() {marker3.closePopup();}
+
+                   
+        </script>
+    
+
+        <div class="rightside">
+            <div id="tree4"><a href="tree images/tree4.jpg" target="_blank"><img src="tree images/tree4.jpg" class= "drawings" ></a></div>
+            <div id="tree5"><a href="tree images/tree5.jpg" target="_blank"><img src="tree images/tree5.jpg" class= "drawings" ></a></div>
+            <div id="tree6"><a href="tree images/tree6.jpg" target="_blank"><img src="tree images/tree6.jpg" class= "drawings" ></a></div>
+        </div>
+
+        <script>
+
+            document.getElementById("tree4").onmouseover = function() {mouseOver4()};
+
+            function mouseOver4() {marker4.openPopup();}
+
+            document.getElementById("tree4").onmouseout = function() {mouseOut4()};
+
+            function mouseOut4() {marker4.closePopup();}
+
+
+            document.getElementById("tree5").onmouseover = function() {mouseOver5()};
+
+            function mouseOver5() {marker5.openPopup();}
+
+            document.getElementById("tree5").onmouseout = function() {mouseOut5()};
+
+            function mouseOut5() {marker5.closePopup();}
+
+
+            document.getElementById("tree6").onmouseover = function() {mouseOver6()};
+
+            function mouseOver6() {marker6.openPopup();}
+
+            document.getElementById("tree6").onmouseout = function() {mouseOut6()};
+
+            function mouseOut6() {marker6.closePopup();}
+
+            $.getJSON("grounds.geojson", function (data) {
+                L.geoJson(data, {
+                    color: "turquoise",
+                    fillColor: "none",
+                    weight: 4,
+                    opacity: 0.7,
+                    dashArray: "6"}).addTo(map);})
+
+            var buildingStyle = {
+                "color": "#8cd9b3",
+                "weight": "2",
+                "opacity": ".6",
+                "fillColor": "#8cd9b1",
+                "fillOpacity": ".8",
+
+            }
+
+            $.getJSON("buildings.geojson", function (data) {
+                L.geoJson(data, {
+                    style: buildingStyle,
+                    
+                 onEachFeature: function (feature, layer) {var popupContent =  
+                 '<b>'+ feature.properties.name+ '</b>' + '<br>' + feature.properties.description; 
+                 layer.bindPopup(popupContent);}}).addTo(map);
+            });
+
+
+        </script>
+    </div>
+
+    </body>
+    
+</html>
